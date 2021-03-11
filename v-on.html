@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>v-on event listening</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id='app'>
+         <label >Game points: {{count}}</label>
+         <input type="button"  value="add" @click="add">
+         <input type="button"  value="min" @click="min">
+        </div>
+        <script>
+            var vm=new  Vue({
+                el:'#app',
+                data:{
+                    count:0
+                },
+                methods: {
+                    add(){
+                        this.count++
+                    },
+                    min(){
+                        this.count--
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
