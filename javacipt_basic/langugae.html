@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>js</title>
+    <link rel="stylesheet" href="css_language.css">
+
+</head>
+
+<body>
+
+    <div>
+        <h1 class="head">Javascript Course lesson</h1>
+
+        <h2 class="content">1.how to use js to build webpage</h2>
+        <input type="checkbox" id="use">html</br>
+        <input type="checkbox" id="use">css</br>
+        <input type="checkbox" id="use">Javascript</br>
+        <input type="button" value="done">
+    </div>
+    <script>
+        var obj = {
+            name: 'tolle',
+            age: '32',
+            orgin: 'philillpipns',
+            marry: false,
+            salary: '$4380',
+            upgrade_time: new Date(),
+            positon: {
+                title: 'AutomationTest',
+                work_years: 3,
+                level: 'advanced',
+                specailty: 'app automatic test'
+            },
+        
+
+        };
+        obj.contract='telegram';
+        console.log(obj);
+    
+        function add(){
+           let sum=0;
+           
+           for (i=0,j=arguments.length;i<j;i++){
+               sum+=arguments[i]
+               
+           }
+           return sum
+        
+        };
+        var adds=add(1,2,3);
+        console.log(adds);
+        function adder(a){
+            return function inner(b){
+                return a+b
+
+            }
+        };
+        var ad_result=adder(4);
+        console.log(ad_result(5))
+
+    </script>
+
+</body>
+
+</html>
