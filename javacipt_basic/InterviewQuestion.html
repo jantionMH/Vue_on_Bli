@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview Question</title>
+</head>
+<body>
+    <script>
+        var name='this window';
+        obj={
+            name:'ugtret',
+            getname:function(){
+                return function(){
+                    return this.name
+                }
+            }
+        }
+        var name2='this window';
+        obj2={
+            name2:'ugtret',
+            getname2:function(){
+                var that=this.name2
+                return function(){
+                    return that
+                }
+            }
+        }
+        
+        // what the output of below
+        alert(obj.getname()())// output:this window ,because this.name is system  window
+        alert(obj2.getname2()())// output: ugtret ,because that=this.name2 
+        
+        
+        
+    </script>
+</body>
+
+</html>
